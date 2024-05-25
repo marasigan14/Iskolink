@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/college dept.css">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+</head>
+<body>
+    <div id="departmentPage" style="text-align: center;">
+        <h1>Select Your College Department</h1>
+        <form id="departmentForm" action="profile.html">
+            <div class="department-option">
+                <input type="radio" id="CAF" name="department" value="CAF">
+                <label for="CAF">CAF - College of Accountancy and Finance</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="CADBE" name="department" value="CADBE">
+                <label for="CADBE">CADBE - College of Architecture, Design and the Built Environment</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="CAL" name="department" value="CAL">
+                <labelfor="CAL">CAL - College of Arts and Letters</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="CBA" name="department" value="CBA">
+                <label for="CBA">CBA - College of Business Administration</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="COC" name="department" value="COC">
+                <label for="COC">COC - College of Communication</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="CCIS" name="department" value="CCIS">
+                <label for="CCIS">CCIS - College of Computer and Information Sciences</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="COED" name="department" value="COED">
+                <label for="COED">COED - College of Education</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="CE" name="department" value="CE">
+                <label for="CE">CE - College of Engineering</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="CHK" name="department" value="CHK">
+                <label for="CHK">CHK - College of Human Kinetics</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="CPSPA" name="department" value="CPSPA">
+                <label for="CPSPA">CPSPA - College of Political Science and Public Administration</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="CSSD" name="department" value="CSSD">
+                <label for="CSSD">CSSD - College of Social Sciences and Development</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="CS" name="department" value="CS">
+                <label for="CS">CS - College of Science</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="CTHTM" name="department" value="CTHTM">
+                <label for="CTHTM">CTHTM - College of Tourism, Hospitality and Transportation Management</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="ITECH" name="department" value="ITECH">
+                <label for="ITECH">ITECH - Institute of Technology</label>
+            </div>
+            <div class="department-option">
+                <input type="radio" id="OU" name="department" value="OU">
+                <label for="OU">OU - Open University</label>
+            </div>
+        </form>
+        <button type="button" onclick="handleNext()">Next</button>
+    </div>
+    <script>
+        var departmentOptions = document.querySelectorAll('.department-option');
+        departmentOptions.forEach(function(option) {
+            option.addEventListener('click', function() {
+                departmentOptions.forEach(function(opt) {
+                    opt.classList.remove('selected');
+                });
+                option.classList.add('selected');
+            });
+        });
+
+        function handleNext() {
+            var department = document.querySelector('input[name="department"]:checked');
+            if (!department) {
+                alert('Please select a department before proceeding.');
+            } else {
+                // Redirect to the next page (specified in the form's action attribute)
+                document.getElementById('departmentForm').submit();
+            }
+        }
+    </script>
+</body>
+</html>

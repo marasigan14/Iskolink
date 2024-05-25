@@ -1,0 +1,386 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(background3.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat; /* The background image will not repeat */
+  background-size: cover; /* The background image will cover the entire page */
+}
+
+header {
+background-color:  rgb(255, 213, 43); /* Set your desired background color */
+padding: 0px;
+border-bottom: px solid #ccc;
+display: flex;
+align-items: center;
+position: fixed; /* Fix the header at the top */
+top: 0; /* Align the header at the top */
+width: 100%; /* Ensure the header spans the full width */
+z-index: 10; /* Ensure the header stays above other content */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Add a subtle shadow */
+}
+.header-icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  transform: translateY(-3px);
+}
+
+.notification-icon,
+.settings-icon {
+  margin-left: px;
+  text-decoration: none;
+  color: #333;
+  
+}
+
+.notification-icon img,
+.settings-icon img {
+  width: 20px;
+  height: 20px;
+  margin-right: 30px;
+  margin-top: 20px;
+  display: inline-block;
+  
+}
+/* Add padding to the top of the main content to prevent it from being hidden behind the fixed header */
+main {
+  padding-top: 70px; /* Adjust this value based on the height of your header */
+}
+
+
+#logo {
+height: 50px; /* Adjust the size as needed */
+width: 45px;
+margin-right: 10px; /* Add some space between the logo and the title */
+margin-left: 30px;
+}
+
+h1 {
+  margin: 0;
+  flex-grow: 1; /* Allows the title to take up the remaining space */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#post-section {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  border-bottom: px solid #fffefe;
+  justify-content: center; /* Center horizontally */
+  margin-top: 50px;
+
+}
+
+.post-container {
+  display: flex;
+  background-color:   #fffef7;
+  border: px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, , 0.2);
+  margin-top: 20px;
+}
+
+.user-photo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 30px;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, , 0.1);
+}
+
+.post-input textarea {
+  width: 90%; /* Set the width to fill the container */
+  height: 10px; /* Set a fixed height, or use 'min-height' for a flexible starting size */
+  padding: 10px; /* Add some padding inside the textarea */
+  border: 1px solid #f2eceb; /* Add a border similar to your input */
+  border-radius: 120px; /* Slightly round the corners */
+  resize: vertical; /* Allow the user to resize vertically */
+  margin-top: 5px;
+}
+
+.add-photo label {
+  cursor: pointer;
+}
+
+.add-photo input[type="file"] {
+  display: none;
+}
+
+/* Adjust the size of the photo icon */
+.add-photo img {
+  width: 30px; /* Set the desired width */
+  height: 30px; /* Set the desired height */
+  margin-left: 10px;
+  margin-right: 50px;
+  margin-bottom:15px;
+  margin-top: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, , 0.1);
+  border-radius: 40px;
+  
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ba8e37;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 50px;
+  
+}
+
+button:hover {
+  background-color: #1a1609;
+}
+
+#newsfeed {
+  flex-grow: 1;
+  overflow-y: ;
+  text-align: center;
+  margin-left: 290px;
+  margin-right: 290px;
+  display: flex;
+}
+/* Add this to your existing CSS or create a new CSS file */
+.newsfeed-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(1, 2, 2, 0.1);
+  text-align: center; /* Center the entire post */
+  margin-bottom: 90px;
+  
+
+}
+
+/* Smaller profile icons */
+.newsfeed-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-icon {
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  border-radius: 50%; /* Circular profile icon */
+  margin-right: 10px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.time-posted {
+  font-size: 0.8em;
+  color: #777;
+  text-align: left;
+}
+
+.post-content {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.media-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden; /* Ensure content doesn't spill out */
+}
+
+.post-image {
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below image */
+  margin-bottom: 10px; /* Add space between image and buttons */
+}
+
+.interaction-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.heart-button,
+.comment-button,
+.share-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 1px;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  border-top: #1a1609;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Add a subtle shadow */
+}
+
+footer {
+  background-color: rgb(255, 213, 43);
+  color: white;
+  padding: 1px 0;
+  text-align: center;
+  border-top: #1a1609;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Add a subtle shadow */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  flex-direction: column;
+  display: flex;
+  margin:  auto 20px;
+
+}
+
+.footer-icon {
+  font-size: 50px;
+  display: inline-block;
+  color: black;
+ 
+}
+
+footer nav ul li a:hover {
+  color: white;
+  transition: transform 0.3s ease;
+  transform: translateY(-3px);
+}
+/* Initial state of the body with fade-in effect */
+body {
+animation: fadeIn 0.5s ease-in-out;
+opacity: 1;
+visibility: visible;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+from {
+    opacity: 0;
+    visibility: hidden;
+}
+to {
+    opacity: 1;
+    visibility: visible;
+}
+}
+
+/* Fade out animation */
+.fade-out {
+animation: fadeOut 0.5s ease-in-out;
+opacity: 0;
+visibility: hidden;
+}
+
+@keyframes fadeOut {
+from {
+    opacity: 1;
+    visibility: visible;
+}
+to {
+    opacity: 0;
+    visibility: hidden;
+}
+}
+
+/* Ensure the animations fill the mode */
+body {
+animation-fill-mode: forwards;
+}

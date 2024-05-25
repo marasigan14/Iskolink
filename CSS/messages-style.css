@@ -1,0 +1,265 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    background-image: url(background3.jpg);
+    background-repeat: no-repeat; /* The background image will not repeat */
+    background-size: cover; /* The background image will cover the entire page */
+}
+
+header {
+    background-color:  rgb(255, 213, 43); /* Set your desired background color */
+    padding: 0px;
+    border-bottom: px solid #ccc;
+    display: flex;
+    align-items: center;
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Align the header at the top */
+    width: 100%; /* Ensure the header spans the full width */
+    z-index: 10; /* Ensure the header stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Add a subtle shadow */
+}
+.header-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.notification-icon,
+.settings-icon {
+    margin-left: px;
+    text-decoration: none;
+    color: #333;
+    
+}
+
+.notification-icon img,
+.settings-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    
+}
+/* Add padding to the top of the main content to prevent it from being hidden behind the fixed header */
+main {
+    padding-top: 70px; /* Adjust this value based on the height of your header */
+}
+
+
+#logo {
+    height: 50px; /* Adjust the size as needed */
+    width: 45px;
+    margin-right: 10px; /* Add some space between the logo and the title */
+    margin-left: 30px;
+}
+
+h1 {
+    margin: 0;
+    flex-grow: 1; /* Allows the title to take up the remaining space */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.user-container {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 5px;
+    margin-bottom: 90px;
+    background-color: rgba(255, 255, 255, 0.526);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, , 0.1);
+    position: relative;
+    top: 0; /* Adjust this value to position the container at the top of the section */
+    max-height: 500px; /* Set a maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.user-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.user-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.message {
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+.user-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 30px;
+    transition: transform 0.3s ease;
+}
+
+.user-link:hover {
+    transform: translateY(-3px);
+}
+
+.user-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 30px;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.chat-preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure the chat preview takes up the full width */
+}
+
+.last-chat {
+    font-size: 0.8rem;
+    color: #666;
+    /* Removed margin-right property */
+}
+
+.chat-time {
+    font-size: 0.8rem;
+    color: #999;
+    /* Removed border-left and padding-left properties */
+}
+
+/* Additional styles to ensure proper alignment */
+.user-info {
+    flex: 1; /* Allow user-info to take up the remaining space */
+    padding: 0 10px; /* Add padding to prevent text from touching the edges */
+}
+
+.user-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+    width: 100%; /* Ensure the link takes up the full width */
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 1px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    border-top: #1a1609;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Add a subtle shadow */
+}
+
+footer {
+    background-color: rgb(255, 213, 43);
+    color: white;
+    padding: 1px 0;
+    text-align: center;
+    border-top: #1a1609;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Add a subtle shadow */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+}
+
+.icons{
+    flex-direction: column;
+display: flex;
+margin:  auto 20px;
+}
+
+.footer-icon {
+    font-size: 50px;
+    display: inline-block;
+    color: black;
+}
+
+footer nav ul li a:hover {
+    color: white;
+    transition: transform 0.3s ease;
+    transform: translateY(-3px);
+}
+/* Initial state of the body with fade-in effect */
+body {
+    animation: fadeIn 0.5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Fade out animation */
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Ensure the animations fill the mode */
+body {
+    animation-fill-mode: forwards;
+}

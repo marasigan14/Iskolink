@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/fill-profile.css">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+</head>
+<body>
+    <div id="profilePage" style="text-align: center;">
+        <h1>Fill Your Profile</h1>
+        <p>Complete your profile to help us improve your experience</p>
+        <form id="profileForm" style="text-align: center;">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="text" id="nickname" name="nickname" placeholder="Nickname" required>
+            <input type="date" id="birthday" name="birthday" required>
+            <button type="submit">Continue</button>
+        </form>
+    </div>
+    <div id="agePage" style="text-align: center;">
+        <h1>Age</h1>
+        <p>Select your appropriate age to discover connection conveniently.</p>
+        <p style="text-align: center;">We’ll help you to match your way</p>
+        <form id="ageForm">
+            <input type="range" id="age" name="age" min="1" max="100" value="20" oninput="ageOutput.value = age.value">
+            <output id="ageOutput">20</output>
+            <button type="submit">Continue</button>
+        </form>
+    </div>
+    <script>
+        const profileForm = document.getElementById('profileForm');
+        profileForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const nickname = document.getElementById('nickname').value;
+            const birthday = document.getElementById('birthday').value;
+
+            // Perform your validation here.
+            // If the input is valid, show the age page.
+            document.getElementById('profilePage').style.display = 'none';
+            document.getElementById('agePage').style.display = 'block';
+            window.location.href = 'gender.html';
+        });
+
+        var slider =document.getElementById("age");
+        var output = document.getElementById("ageOutput");
+        output.innerHTML = slider.value;
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+    </script>
+</body>
+</html>

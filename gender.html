@@ -1,0 +1,51 @@
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/gender.css">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    
+</head>
+<body>
+    <div id="genderPage" style="text-align: center;">
+        <h1>Be True to Yourself</h1>
+        <p>Choose the gender that best represents you.</p>
+        <p>Authenticity is the key to meaningful connections.</p>
+        <form id="genderForm">
+            <div class="gender-option">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+            </div>
+            <div class="gender-option">
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div class="gender-option">
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+    <script>
+        var genderOptions = document.querySelectorAll('.gender-option');
+        genderOptions.forEach(function(option) {
+            option.addEventListener('click', function() {
+                genderOptions.forEach(function(opt) {
+                    opt.classList.remove('selected');
+                });
+                option.classList.add('selected');
+            });
+        });
+
+        document.getElementById('genderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var gender = document.querySelector('input[name="gender"]:checked');
+            if (!gender) {
+                alert('Please select a gender option before proceeding.');
+            } else {
+                // Proceed to the department selection page
+                window.location.href = 'college dept.html?gender=' + encodeURIComponent(gender.value);
+            }
+        });
+    </script>
+</body>

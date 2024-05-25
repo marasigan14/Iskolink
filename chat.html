@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IskoChat!</title>
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" type="text/css" href="CSS/chat.css">
+
+</head>
+<body>
+    <a href="javascript:history.back()" class="go-back">
+        <img src="go-back.png" alt="Go Back">
+      </a>
+    <div class="chat-container">
+        <div id="username">
+            <div class="profile-icon"></div> <!-- Profile icon before the username -->
+            BINI Aiah<span class="department">College of Computer and Information Science</span>
+        </div>
+        <div class="message-box" id="messageBox">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="input-container">
+        <input type="text" class="input-field" id="messageInput" placeholder="Type your message...">
+        <button class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for handling chat functionality
+const messageBox = document.getElementById('messageBox');
+const messageInput = document.getElementById('messageInput');
+
+function sendMessage() {
+    const message = messageInput.value.trim();
+    if (message) {
+        // Create a new message bubble
+        const newMessage = document.createElement('div');
+        newMessage.classList.add('message', 'my-message');
+        newMessage.textContent = message;
+
+        // Insert the new message bubble at the beginning of the message box
+        messageBox.insertBefore(newMessage, messageBox.firstChild);
+
+        // Clear the input field
+        messageInput.value = '';
+
+        // Simulate receiving a message from another person with a delay
+        function receiveMessage(text) {
+            setTimeout(function() {
+                // Create a new message bubble for the other person
+                const newMessage = document.createElement('div');
+                newMessage.classList.add('message', 'other-message');
+
+                // Create a profile icon for the other person
+                const profileIcon = document.createElement('div');
+                profileIcon.classList.add('profile-icon-left');
+
+                // Set the text for the new message
+                newMessage.textContent = text;
+
+                // Append the profile icon to the message bubble
+                newMessage.appendChild(profileIcon);
+
+                // Insert the new message bubble at the beginning of the message box
+                messageBox.insertBefore(newMessage, messageBox.firstChild);
+            }, 2000); // Delay in milliseconds (2000ms = 2 seconds)
+        }
+
+        // Example usage:
+        if (message.toLowerCase().includes('hello')) {
+            receiveMessage("Hi po! kumusta ka?");
+        } else if (message.toLowerCase().includes('okay lang po, hbu?')) {
+            receiveMessage("okay na okay");
+        } else {
+            receiveMessage("beh...");
+        }
+    }
+}
+
+        // Event listener for Enter key press
+        messageInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    var links = document.querySelectorAll('a');
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default link behavior
+            var destination = this.href;
+
+            document.body.classList.add('fade-out'); // Add the fade-out class
+
+            setTimeout(function() {
+                window.location.href = destination;
+            }, 500); // Match the timeout with the CSS animation duration
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

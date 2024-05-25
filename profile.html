@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="CSS/profilestyles.css">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="header-icons">
+            <a href="find.html" class="notification-icon"><img src="bell.png" alt="Notification Icon"></a>  
+            <a href="settings.html" class="settings-icon"><img src="settings.png" alt="Settings Icon"></a>
+        </div>
+        <img src="logo.png" alt="Iskolink Logo" id="logo"> <!-- Add your logo file here -->
+        <h2>Iskolink</h2>
+        <!-- Add navigation links here -->
+    </header>
+        <main class="main-content">
+            <h1 class="profile">Profile</h1>
+            <div class="user-profile">
+                <img src="male.png" alt="User Profile Picture" class="profile-pic">
+                <button id="editProfilePic">Edit Profile Picture</button>
+        <input type="file" id="fileInput" style="display: none;" accept="image/*">
+                <div class="user-info">
+                    <div class="username-age">
+                        <span class="username">YourUsername</span>,
+                        <span class="age">20</span>
+                    </div>
+                    <div class="gender"> Male</div>
+                    <div class="department">College of Computer and Information Sciences</div>
+                </div>
+            </div>
+            <section class="about-section">
+                <h3>About</h3>
+                <div id="aboutContent" contenteditable="true" style="border: 1px solid #ccc; padding: 10px; min-height: 50px;">
+                    <!-- The user's about content will appear here -->
+                </div>
+                <button id="submitAbout">Update</button>
+            </section>
+            <section class="gallery-section">
+                <h3>Gallery</h3>
+                <button id="uploadImage">Upload Image</button>
+                <input type="file" id="imageInput" style="display: none;" accept="image/*" multiple>
+                <div id="galleryContainer">
+                    <!-- Uploaded images will be displayed here -->
+                </div>
+            </section>
+        </main>
+
+    <!-- Third row: Footer -->
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <a href="linkages.html">
+                        <i class='bx bx-link footer-icon' ></i>Linkages
+                    </a>
+                </li>
+                <li>
+                    <a href="find.html">
+                        <i class='bx bx-search-alt-2 footer-icon' ></i>Find
+                    </a>
+                </li>
+                <li>
+                    <a href="iskolink.html">
+                        <i class='bx bxs-copy-alt footer-icon'></i>Newsfeed
+                    </a>
+                </li>
+                <li>
+                    <a href="messages.html">
+                        <i class='bx bx-message-square-dots footer-icon'></i>Message
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class='bx bx-user-circle footer-icon'></i></box-icon>
+                        Profile
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="profilejs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+</body>
+</html>

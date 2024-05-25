@@ -1,0 +1,291 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(background3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat; /* The background image will not repeat */
+    background-size: cover; /* The background image will cover the entire page */
+}
+
+header {
+    background-color:  rgb(255, 213, 43); /* Set your desired background color */
+    padding: 0px;
+    border-bottom: px solid #ccc;
+    display: flex;
+    align-items: center;
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Align the header at the top */
+    width: 100%; /* Ensure the header spans the full width */
+    z-index: 10; /* Ensure the header stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Add a subtle shadow */
+}
+.header-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    transform: translateY(-3px);
+}
+
+.notification-icon,
+.settings-icon {
+    margin-left: px;
+    text-decoration: none;
+    color: #333;
+    
+}
+
+.notification-icon img,
+.settings-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    
+}
+/* Add padding to the top of the main content to prevent it from being hidden behind the fixed header */
+main {
+    padding-top: 70px; /* Adjust this value based on the height of your header */
+}
+
+
+#logo {
+    height: 50px; /* Adjust the size as needed */
+    width: 45px;
+    margin-right: 10px; /* Add some space between the logo and the title */
+    margin-left: 30px;
+}
+
+h1 {
+    margin: 0;
+    flex-grow: 1; /* Allows the title to take up the remaining space */
+}
+.main-content {
+    /* Add a class to wrap the main content sections */
+    padding: 20px;
+    margin-top: 70px; /* Adjust this value to ensure it's below the user profile */
+}
+.profile{
+    text-align: center;
+}
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff; /* Change this to match your design */
+    border-radius: 10px; /* Optional: adds rounded corners to the profile box */
+    margin-top: 10px; /* Adjust this value to position the profile box below the header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow to the profile box */
+}
+.profile-pic {
+    width: 150px; /* Set the width to your preferred medium size */
+    height: 150px; /* Set the height to the same value as width for a 1:1 aspect ratio */
+    object-fit: cover; /* This will ensure the image covers the area without being stretched */
+    border-radius: 10%; /* Optional: makes the image circular */
+    margin-top: 20px; /* Adjust as needed to position the image below the header */
+}
+#editProfilePic {
+    background-color: #f84343; /* Match this with your theme color */
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.username-age {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+}
+
+.age {
+    font-size: 20px; /* Adjust the font size as needed */
+    margin-left: 5px;
+}
+
+.gender{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.department {
+    font-size: 18px; /* Adjust the font size as needed */
+    color: #666; /* Adjust the color as needed */
+    margin-top: 5px;
+}
+.about-section,
+.gallery-section {
+    /* Ensure these sections have enough space and are not overlapping */
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+
+#about-text {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    resize: none; /* Prevents resizing of the textarea */
+    height: 50px; /* Adjust as needed */
+    margin-top: 10px;
+}
+
+#about-text::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+.about-section {
+    background-color: #f9f9f9; /* Change this to match your design */
+    padding: 20px;
+    margin-top: 20px;
+}
+#submitAbout{
+    background-color: #f84343; /* Match this with your theme color */
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+}
+.gallery-section {
+    
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f9f9f9; /* Change this to match your design */
+    margin-top: 20px;
+    margin-bottom: 100px;
+    text-align: left;
+}
+
+.gallery-item {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    margin: 10px;
+    background-color: #ddd; /* Placeholder color */
+    border-radius: 10px; /* Optional: adds rounded corners to the gallery items */
+}
+#uploadImage {
+    background-color: #f84343; /* Match this with your theme color */
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 1px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    border-top: #1a1609;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Add a subtle shadow */
+}
+
+footer {
+    background-color: rgb(255, 213, 43);
+    color: white;
+    padding: 1px 0;
+    text-align: center;
+    border-top: #1a1609;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Add a subtle shadow */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    flex-direction: column;
+    display: flex;
+    margin:  auto 20px;
+
+}
+
+.footer-icon {
+    font-size: 50px;
+    display: inline-block;
+    color: black;
+   
+}
+
+footer nav ul li a:hover {
+    color: white;
+    transition: transform 0.3s ease;
+    transform: translateY(-3px);
+}
+
+/* Initial state of the body with fade-in effect */
+body {
+    animation: fadeIn 0.5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Fade out animation */
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Ensure the animations fill the mode */
+body {
+    animation-fill-mode: forwards;
+}

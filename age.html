@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/age.css">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+    <div id="agePage" style="text-align: center;">
+        <h1>Age</h1>
+        <p>Select your appropriate age to discover connection conveniently.</p>
+        <p style="text-align: center;">We’ll help you to match your way</p>
+        <form id="ageForm">
+            <input type="range" id="age" name="age" min="18" max="30" value="18" oninput="ageOutput.value = age.value">
+            <output id="ageOutput">18</output>
+            <button type="submit">Continue</button>
+        </form>
+    </div>
+    <script>
+        var slider =document.getElementById("age");
+        var output = document.getElementById("ageOutput");
+        output.innerHTML = slider.value;
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+        const ageForm = document.getElementById('ageForm');
+        ageForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const age = document.getElementById('age').value;
+            console.log(`Age: ${age}`);
+            window.location.href = 'gender.html';
+        });
+    </script>
+</body>
+</html>

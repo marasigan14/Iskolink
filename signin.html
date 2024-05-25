@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="CSS/signin.css">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<script src="https://kit.fontawesome.com/21d53e13b2.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-icon"><img src="logo.png" alt="Logo" class="logo"></div>
+        <h1 style=" padding-left: 70px; font-size: 20px;">Welcome <span style="color: #a44446;">Isko</span></h1>
+        <form id="loginForm">
+
+        <div class="input-group">        
+            <div class="input-field">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Email/Telephone">
+            </div>
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" placeholder="Password">
+                <i class="fas fa-eye" id="toggleIcon" onclick="togglePassword()"></i>
+            </div>
+        </div>
+
+            <div class="remember-me">
+                <label><input type="checkbox"> Remember me</label>
+            </div>
+            <button type="submit" class="sign-in-button">Sign In</button>
+            <div class="social-icons">
+                <p style="margin-top: 0; margin-left: 60px; margin-bottom: 10px; font-size: 15px;">-- or sign up with --</p>
+                <a class="socmed" href="https://www.facebook.com">
+                  <ion-icon name="logo-facebook" style="color: #0866ff; font-size: 40px; margin-left: 70px;" aria-label="Facebook"></ion-icon>
+                </a>
+                <a class="socmed" href="https://www.google.com/">
+                  <ion-icon name="logo-google" alt="Google" style="color: rgb(255, 255, 255); font-size: 18px; background-color: #dc493f; border-radius: 30px; border: 10px; padding: 10px;"></ion-icon>
+                </a>
+                <a class="socmed" href="https://www.apple.com/">
+                  <ion-icon name="logo-apple" alt="Apple" style="color: rgb(255, 255, 255); font-size: 18px; background-color: #000000; border-radius: 25px; border: 10px; padding: 10px;"></ion-icon>
+                </a>
+              </div>
+           
+    
+        </form>
+        <div class="sign-up-link">Don't have an account? <a href="signup.html">Sign Up</a></div>
+        <div class="forgot-password"><a href="forgot-password.html">Forgot Password</a></div>
+    </div>
+    <script>
+                function togglePassword() {
+        var passwordInput = document.getElementById('password');
+        var toggleIcon = document.getElementById('toggleIcon');
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleIcon.classList.add('fa-eye-slash');
+            toggleIcon.classList.remove('fa-eye');
+        } else {
+            passwordInput.type = 'password';
+            toggleIcon.classList.add('fa-eye');
+            toggleIcon.classList.remove('fa-eye-slash');
+        }
+        }
+        // Get the form element
+        var loginForm = document.getElementById('loginForm');
+
+        // Add an event listener for the 'submit' event
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // TODO: Here you would normally get the values from the input fields
+            // var email = ...
+            // var password = ...
+
+            // TODO: Send the email and password to your server for validation
+            // For demonstration purposes, we'll assume the credentials are correct
+
+            // If credentials are correct, redirect to the main page
+            window.location.href = 'iskolink.html';
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

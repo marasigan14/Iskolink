@@ -1,0 +1,142 @@
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    height: 100vh;
+    display: flex;
+    }
+    /* Container holding the form */
+    .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff; /* Assuming a light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    }
+
+    /* Style for the input fields */
+    input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    } 
+    .container input::placeholder {
+    color: #ccc;
+    }
+    .container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #b8090f;
+    color: white;
+    cursor: pointer;
+    }
+    .container button:hover {
+    background-color: #da1515; 
+    }
+    /* Additional styles for social icons and links */
+.social-icons p,
+.signin-link,
+.links {
+    margin: 20px 0;
+}
+
+.social-icon img {
+    width: 24px; /* Adjust as needed */
+    margin: 0 10px;
+}
+
+/* Style for the sign-in link */
+.signin-link a {
+    color: #0077cc; /* Adjust the color as needed */
+    text-decoration: none;
+}
+
+/* Style for the terms and privacy policy links */
+.links a {
+    color: #0077cc; /* Adjust the color as needed */
+    text-decoration: none;
+    margin: 0 5px;
+}
+.password-strength {
+            font-size: 0.9em;
+        }
+
+        .strength-bad {
+            color: red;
+        }
+
+        .strength-not-bad {
+            color: orange;
+        }
+
+        .strength-strong {
+            color: green;
+        }
+        .eye-icon {
+            cursor: pointer;
+            position: absolute;
+            right: 1px;
+            top: 70px; /* Adjust the position as needed */
+        }
+
+        /* Adjust the input field to make space for the eye icon */
+        .password-field {
+            position: relative;
+        }
+
+        .password-field input[type='password'] {
+            padding-right: px; /* Make space for the eye icon */
+        }
+        /* Initial state of the body with fade-in effect */
+body {
+    animation: fadeIn 0.5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Fade out animation */
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Ensure the animations fill the mode */
+body {
+    animation-fill-mode: forwards;
+}

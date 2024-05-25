@@ -1,0 +1,139 @@
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #fa3838 0%, #f8c243 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat; /* The background image will not repeat */
+    background-size: cover; /* The background image will cover the entire page */
+    }
+    .go-back {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    }
+    .go-back img {
+    width: 32px; /* You can adjust the size as needed */
+    height: auto;
+    margin-bottom: 10px;
+    }
+  .outer-container {
+    background-color: #ffffff; /* White background */
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,,0.1); /* Shadow for depth */
+  }
+  .settings-menu {
+    background-color: #fcfc7e; /* Yellow background */
+    color: #000000; /* Black text */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .settings-menu h2 {
+    color: #0c0101; /* Red text */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .settings-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .settings-menu li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  .settings-menu li img {
+    width: 24px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px;
+  }
+  .settings-menu li a {
+    text-decoration: none;
+    color: #000000; /* Black text */
+    flex-grow: 1;
+  }
+  .settings-menu li::after {
+    content: ">"; /* Right arrow */
+    color: #000000; /* Black text */
+  }
+  
+  .logout-container {
+    background-color: #fcfcfc; /* White background */
+    padding: 3px;
+    margin-top: 20px;
+    margin-left: 800px;
+    display: flex;
+    border-radius: 10px;
+    width: 10%; /* Full width to center the button */
+    text-align: center;
+    justify-content: space-between;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(14, 13, 13, 0.959); /* Shadow for depth */
+  }
+
+  /* Adjust the logout button */
+  .logout-button {
+    text-align: center;
+    background-color: #f32929; /* Red background */
+    color: #ffffff; /* White text */
+    padding: 5px 40px; /* Padding inside the button */
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%; /* Auto width based on content */
+    text-decoration: none;
+  }
+
+  /* Add a margin to the white container */
+  .white-container {
+    margin-top: 20px;
+  }
+/* Initial state of the body with fade-in effect */
+body {
+    animation: fadeIn 0.5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Fade out animation */
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Ensure the animations fill the mode */
+body {
+    animation-fill-mode: forwards;
+}

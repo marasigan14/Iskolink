@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iskolink!</title>
+    <link rel="stylesheet" href="CSS/iskolink.css">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="header-icons">
+            <a href="find.html" class="notification-icon"><img src="bell.png" alt="Notification Icon"></a>
+            <a href="settings.html" class="settings-icon"><img src="settings.png" alt="Settings Icon"></a>
+        </div>
+        <img src="logo.png" alt="Iskolink Logo" id="logo"> <!-- Add your logo file here -->
+        <h2>Iskolink</h2>
+        <!-- Add navigation links here -->
+    </header>
+
+    <main>
+        <!-- First row: Post section -->
+        <section id="post-section">
+            <div class="post-container">
+                <div class="user-photo">
+                    <!-- User's profile photo (small circular image) -->
+                    <img src="male.png" alt="User Profile Photo">
+                </div>
+                <div class="post-input">
+                    <textarea id="post-content" name="post-content" placeholder="What's on your mind?" required></textarea>
+                  </div>
+                <div class="add-photo">
+                    <!-- Clickable icon for adding a photo -->
+                    <label for="post-image">
+                        <img src="photo-icon.png" alt="Add Photo Icon">
+                    </label>
+                    <input type="file" id="post-image" name="post-image" accept="image/*">
+                
+        </section>
+        <!-- Second row: Newsfeed -->
+        <section id="newsfeed">
+            <div class="newsfeed-container">
+                <!-- Individual posts go here -->
+                <!-- Newsfeed Item -->
+                
+                <!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+  
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+  
+    <!-- Modal Caption (Image Title) -->
+    <div id="caption"></div>
+  </div>
+
+<div class="newsfeed-item">
+    <!-- User Info -->
+    <div class="user-info">
+      <img src="maloi.png" alt="Profile Icon" class="profile-icon">
+      <div class="user-details">
+        <div class="username">BINI Maloi</div>
+        <div class="time-posted">53m</div>
+      </div>
+    </div>
+  
+    <!-- Post Content -->
+    <div class="post-content">
+      <!-- Conditional rendering based on whether it's an image/video or text -->
+      <div class="post-caption">Another Luckies event well spent! Thank you so much to those who came. Same time next year? 💛🤟 #BINI #BINI_Maloi #MaloiRicalde</div>
+      <div class="media-container"></div>
+      <img src="img-post.jpg" alt="Post Image" class="post-image">
+      <!-- If it's a text post, use a <p> tag instead of <img> -->
+      <!-- <p class="post-text">The post/text</p> -->
+    </div>
+  
+    <!-- Interaction Buttons -->
+    <div class="interaction-buttons">
+      <button class="heart-button">❤️</button>
+      <button class="comment-button">💬</button>
+      <button class="share-button">🔗</button>
+    </div>
+  </div>
+            </div>   
+            
+        </section>
+
+        
+    </main>
+
+    <!-- Third row: Footer -->
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <a href="linkages.html">
+                        <i class='bx bx-link footer-icon' ></i>Linkages
+                    </a>
+                </li>
+                <li>
+                    <a href="find.html">
+                        <i class='bx bx-search-alt-2 footer-icon' ></i>Find
+                    </a>
+                </li>
+                <li>
+                    <a href="iskolink.html">
+                        <i class='bx bxs-copy-alt footer-icon'></i>Newsfeed
+                    </a>
+                </li>
+                <li>
+                    <a href="messages.html">
+                        <i class='bx bx-message-square-dots footer-icon'></i>Message
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class='bx bx-user-circle footer-icon'></i></box-icon>
+                        Profile
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="iskoscript.js"></script>
+</body>
+</html>
